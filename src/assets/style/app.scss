@@ -1,0 +1,228 @@
+@import "other";
+// navbar
+.navbar {
+  position: fixed;
+  padding: 5vh 5vw;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  background: transparent;
+  z-index: 4;
+  transition: 0.5s;
+  @include center(center, space-between);
+  &_logo {
+    @include center;
+    a {
+      font-size: 1.5em;
+      font-weight: 500;
+      @include center;
+      white-space: nowrap;
+      &::first-letter {
+        color: var(--cl);
+      }
+      svg {
+        width: 50px;
+      }
+    }
+    .menu {
+      display: none;
+    }
+  }
+  ul {
+    width: 100%;
+    @include center;
+    gap: 20px;
+    transition: 0.5s;
+    li {
+      a {
+        position: relative;
+        padding: 10px;
+        color: #555;
+        font-weight: 500;
+        transition: 0.5s;
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          width: 0;
+          background: var(--cl);
+          transition: 0.5s;
+        }
+        &.router-link-exact-active,
+        &.active,
+        &:hover {
+          color: var(--cl);
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &_content {
+    @include center;
+    gap: 10px;
+    .lang {
+      position: relative;
+      @include center;
+      &:hover .lang_opt {
+        @include center(flex-start, center, column);
+        opacity: 1;
+      }
+      &_icon {
+        @include center;
+        img {
+          width: 30px;
+        }
+        svg {
+          width: 15px;
+        }
+      }
+      &_opt {
+        position: absolute;
+        padding: 5px 10px;
+        bottom: 0;
+        left: 0;
+        transform: translate(-25%, 100%);
+        color: #fff;
+        background: var(--cl);
+        border-radius: 4px;
+        transition: opacity 2.5s;
+        @include center(flex-start, center, column);
+        display: none;
+        opacity: 0;
+        h3 {
+          cursor: pointer;
+          font-size: 18px;
+          font-weight: 500;
+          transition: 0.5s;
+          &:hover,
+          &.active {
+            color: #000;
+          }
+        }
+      }
+    }
+    a {
+      padding: 5px;
+      border-radius: 50px;
+      background: #f1f1f1;
+      @include center;
+      white-space: nowrap;
+      gap: 5px;
+      i {
+        height: 30px;
+        width: 30px;
+        color: #fff;
+        border-radius: 50%;
+        background: var(--cl);
+        @include center;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+.navbar.fixed {
+  padding: 0 5vw;
+  background: #fff;
+}
+
+section {
+  // padding: 0 5vw;
+  min-height: 100vh;
+  // @include center(center, flex-start);
+  // background: var(--cl);
+}
+.home {
+  &_content {
+    padding: 0 5vw 0 0;
+    min-height: 100vh;
+    width: 100%;
+    @include center(center, space-around);
+    img {
+      width: 45vw;
+      transform: translateX(-120px);
+    }
+    ul {
+      width: 35vw;
+      li {
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+        &:last-child {
+          @include center(center, flex-start);
+          flex-wrap: wrap;
+          gap: 10px;
+          mark {
+            padding: 4px;
+            border-radius: 4px;
+            color: var(--cl);
+            font-weight: 500;
+            background: transparent;
+            border: 2px solid var(--cl);
+          }
+        }
+        h2 {
+          font-size: 3em;
+          font-weight: 600;
+        }
+        p {
+          color: var(--gray-8);
+          font-weight: 500;
+        }
+        span {
+          padding: 10px;
+          background: var(--cl);
+          gap: 10px;
+          @include center(center, space-between);
+          border-radius: 10px;
+          color: #fff;
+          input {
+            width: 100%;
+            color: #fff;
+            font-size: 16px;
+            background: transparent;
+            &::placeholder {
+              color: #fff;
+            }
+          }
+          i {
+            cursor: pointer;
+            min-width: 35px;
+            min-height: 35px;
+            background: #fff;
+            border-radius: 10px;
+            @include center;
+            svg {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_features {
+    padding: 5vh 5vw;
+    gap: 20px;
+    @include center(center, space-between);
+    &_item {
+      span {
+        @include center(center, flex-start);
+        h3 {
+          font-size: 1.25em;
+          font-weight: 600;
+        }
+      }
+      p {
+        color: var(--gray-8);
+      }
+    }
+  }
+}
+
+@import "media";

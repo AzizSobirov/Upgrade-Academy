@@ -1,0 +1,116 @@
+@import url("https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --cl: #21e835;
+  --cldark: #38b000;
+  --white: #ffffff;
+  --gray-1: #f6f8f9;
+  --gray-1a: #f4f6f6;
+  --gray-2: #edf1f2;
+  --gray-3: #e0e6e8;
+  --gray-4: #d5dce0;
+  --gray-5: #b7bfc6;
+  --gray-6: #9ca6af;
+  --gray-7: #848f99;
+  --gray-8: #646f79;
+  --gray-9: #222b37;
+  --gray-10: #151b26;
+  --green-1: #e2fffa;
+  --green-2: #b0fff1;
+  --green-3: #58f5d9;
+  --green-4: #25e8c8;
+  --green-5: #00bf9c;
+  --teal-1: #edf8ff;
+  --teal-2: #95e0ff;
+  --teal-3: #32c1ff;
+  --teal-4: #14aaf5;
+  --teal-5: #008ce3;
+  --purple-1: #f0f0ff;
+  --purple-2: #aba3ff;
+  --purple-3: #9287ff;
+  --purple-4: #796eff;
+  --purple-5: #635ac7;
+  --gold-1: #fffede;
+  --gold-2: #fff78f;
+  --gold-3: #ffe01b;
+  --gold-4: #fcbd01;
+  --gold-5: #f2a100;
+  --orange-1: #f9dc00;
+  --orange-2: #ffba00;
+  --orange-3: #ff7f00;
+  --coral-1: #ffedef;
+  --coral-2: #ff9ca5;
+  --coral-3: #ff7381;
+  --coral-4: #ff5263;
+  --coral-5: #ed4758;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+select,
+button,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+@mixin center($ai: center, $jc: center, $fd: row) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+.btn {
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  background: var(--cl);
+  border-radius: 4px;
+  transition: 0.5s;
+  &:hover {
+    color: #fff;
+    background: #013344;
+  }
+}
+input {
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    background: url("https://image.flaticon.com/icons/png/512/659/659891.png")
+      center/cover;
+  }
+  &::placeholder {
+    transition: 0.5s;
+  }
+  &:focus::placeholder {
+    transform: translateX(-100%);
+  }
+}

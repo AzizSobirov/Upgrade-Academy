@@ -1,0 +1,96 @@
+@media screen and (max-width: 999px) {
+  .navbar {
+    padding: 20px 5vw;
+    &_logo {
+      .menu {
+        display: flex;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+    ul {
+      position: fixed;
+      padding: 20px 10px;
+      top: 0;
+      left: -220px;
+      min-height: 100vh;
+      width: 220px;
+      background: #fff;
+      @include center(flex-start, flex-start, column);
+      gap: 15px;
+      z-index: 4;
+      li {
+        a {
+          padding: 5px 10px;
+          &::before {
+            top: 0;
+            left: 0;
+            width: 2.5px;
+            height: 0;
+          }
+          &.router-link-exact-active,
+          &.active,
+          &:hover {
+            &::before {
+              width: 2.5px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    ul.nav {
+      left: 0;
+    }
+    .close {
+      position: fixed;
+      top: 0;
+      right: -100vw;
+      cursor: pointer;
+      min-height: 100vh;
+      width: calc(100vw - 220px);
+      z-index: 4;
+    }
+    .close.nav {
+      right: 0;
+    }
+    &_content {
+      justify-content: flex-end;
+      .lang {
+        &_opt {
+          transform: translate(-50%, 100%);
+        }
+      }
+      a {
+        display: none;
+      }
+    }
+  }
+
+  .home {
+    &_content {
+      padding: 0 0;
+      @include center(center, center, column-reverse);
+      img {
+        width: 100%;
+        transform: translateX(-50px);
+        // display: none;
+      }
+      ul {
+        padding: 0 15px;
+        width: 100%;
+        li {
+          h2 {
+            font-size: 2em;
+          }
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
