@@ -20,7 +20,19 @@ let uz = {
   ],
   courses: [
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course1.jpg",
+      category: "Technology",
+      title: "Marketing",
+      text:
+        "This course aims to give you deeper understanding of core processes ...",
+      mentor: {
+        name: "John Doe",
+        mentor: "Mentor",
+        img: "https://picsum.photos/200/300",
+      },
+    },
+    {
+      img: "https://sinauw.netlify.app/img/course2.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:
@@ -32,7 +44,7 @@ let uz = {
       },
     },
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course3.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:
@@ -44,19 +56,7 @@ let uz = {
       },
     },
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
-      category: "Technology",
-      title: "Digital Marketing Strategy",
-      text:
-        "This course aims to give you deeper understanding of core processes ...",
-      mentor: {
-        name: "John Doe",
-        mentor: "Mentor",
-        img: "https://picsum.photos/200/300",
-      },
-    },
-    {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course4.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:

@@ -20,7 +20,7 @@ let en = {
   ],
   courses: [
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course1.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:
@@ -32,7 +32,7 @@ let en = {
       },
     },
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course2.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:
@@ -44,7 +44,7 @@ let en = {
       },
     },
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course3.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:
@@ -56,7 +56,7 @@ let en = {
       },
     },
     {
-      img: "https://i.ibb.co/qxXxzZx/1.png",
+      img: "https://sinauw.netlify.app/img/course4.jpg",
       category: "Technology",
       title: "Digital Marketing Strategy",
       text:

@@ -80,7 +80,11 @@
         padding: 0 15px;
         width: 100%;
         li {
+          &:not(:first-child) {
+            margin-top: 10px;
+          }
           h2 {
+            margin-top: 50px;
             font-size: 2em;
           }
           &:nth-child(4),
@@ -91,6 +95,34 @@
           }
         }
       }
+    }
+    &_features {
+      padding: 20px 15px;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .courses {
+    overflow: hidden;
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+    p {
+      color: #000;
+      text-align: center;
+    }
+    &::after {
+      right: -5vw;
+      top: 15vh;
+    }
+    &::before {
+      left: -5vw;
+      bottom: 10vh;
+    }
+    ul {
+      flex-direction: column;
     }
   }
 }

@@ -81,20 +81,33 @@ select {
 }
 
 .btn {
-  padding: 5px 20px;
+  margin-top: 20px;
   cursor: pointer;
-  color: #fff;
-  font-weight: 500;
-  white-space: nowrap;
-  background: var(--cl);
-  border-radius: 4px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--cl);
+  font-weight: 600;
+  border: 2px solid var(--cl);
+  border-radius: 6px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .btn:hover {
   color: #fff;
-  background: #013344;
+  background: var(--cl);
 }
 
 input::-webkit-search-cancel-button {
@@ -593,6 +606,22 @@ section {
           justify-content: space-between;
 }
 
+.home_features_item {
+  padding: 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 2px 0.5px var(--gray-4);
+          box-shadow: 0 0 2px 0.5px var(--gray-4);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home_features_item:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 2px 2px 2.5px var(--gray-4);
+          box-shadow: 0 2px 2px 2.5px var(--gray-4);
+}
+
 .home_features_item span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,6 +645,192 @@ section {
 
 .home_features_item p {
   color: var(--gray-8);
+}
+
+.courses {
+  position: relative;
+  min-height: 100vh;
+  padding: 5vh 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.courses::after, .courses::before {
+  content: "";
+  position: absolute;
+  top: 10vh;
+  right: 2.5vw;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  background: var(--cl);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: -1;
+}
+
+.courses::before {
+  top: auto;
+  bottom: 2.5vh;
+  right: auto;
+  left: 2.5vw;
+  background: var(--purple-5);
+}
+
+.courses h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.courses p {
+  color: var(--gray-8);
+}
+
+.courses ul {
+  width: 100%;
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.courses ul li {
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 2px 0.5px var(--gray-4);
+          box-shadow: 0 0 2px 0.5px var(--gray-4);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.courses ul li:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 1px 2px 2.5px var(--gray-4);
+          box-shadow: 0 1px 2px 2.5px var(--gray-4);
+}
+
+.courses ul li:hover .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.courses ul li img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.courses ul li b {
+  color: var(--cl);
+  font-weight: 500;
+}
+
+.courses ul li p {
+  width: 80%;
+}
+
+.courses ul li hr {
+  height: 1.5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--cl);
+}
+
+.courses ul li .mentor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+}
+
+.courses ul li .mentor img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.courses ul li .mentor span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.courses ul li .mentor span h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.courses ul li .mentor span p {
+  color: var(--gray-6);
+  font-size: 14px;
+}
+
+.courses ul li .btn {
+  margin: 10px 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: none;
 }
 
 @media screen and (max-width: 999px) {
@@ -718,11 +933,48 @@ section {
     padding: 0 15px;
     width: 100%;
   }
+  .home_content ul li:not(:first-child) {
+    margin-top: 10px;
+  }
   .home_content ul li h2 {
+    margin-top: 50px;
     font-size: 2em;
   }
   .home_content ul li:nth-child(4), .home_content ul li:nth-child(5), .home_content ul li:nth-child(6), .home_content ul li:nth-child(7) {
     display: none;
+  }
+  .home_features {
+    padding: 20px 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .courses {
+    overflow: hidden;
+  }
+  .courses h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .courses p {
+    color: #000;
+    text-align: center;
+  }
+  .courses::after {
+    right: -5vw;
+    top: 15vh;
+  }
+  .courses::before {
+    left: -5vw;
+    bottom: 10vh;
+  }
+  .courses ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=app.css.map */

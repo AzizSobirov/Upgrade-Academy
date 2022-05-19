@@ -56,7 +56,8 @@
 </template>
 <script>
 import TheLogo from "../components/TheLogo.vue";
-
+import uz from "../locales/uz.js";
+import en from "../locales/en.js";
 export default {
   name: "TheNav",
   data() {
@@ -73,11 +74,10 @@ export default {
   computed: {
     getPages() {
       let pages = [];
-      for (let i = 0; i < 4; i++) {
-        pages.push({
-          name: this.$t("navbar[" + i + "].name"),
-          link: "/" + this.$t("navbar[" + i + "].link"),
-        });
+      if (this.$i18n.locale === "uz") {
+        pages = uz.navbar;
+      } else {
+        pages = en.navbar;
       }
       return pages;
     },

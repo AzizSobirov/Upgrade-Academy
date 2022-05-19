@@ -16,6 +16,22 @@ import TheHome from "../components/TheHome.vue";
 import TheCourses from "../components/TheCourses.vue";
 export default {
   name: "TheMain",
+  // write seo for vue
+  // metaInfo: {
+  //   title: "Upgrading your skills",
+  //   meta: [
+  //     {
+  //       name: "description",
+  //       content: "THis is official website of Upgrade Academy",
+  //     },
+  //     {
+  //       name: "keywords",
+  //       content:
+  //         "Upgrade Academy, Aziz Sobirov Upgrade Academy,Aziz Sobirov, Aziz Sobirov Academy, QWERTY Upgrade Academy",
+  //     },
+  //   ],
+  // },
+
   data() {
     return {
       langs: ["en", "uz"],

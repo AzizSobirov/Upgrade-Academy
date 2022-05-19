@@ -211,6 +211,14 @@ section {
     gap: 20px;
     @include center(center, space-between);
     &_item {
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 2px 0.5px var(--gray-4);
+      transition: 0.5s;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 2px 2px 2.5px var(--gray-4);
+      }
       span {
         @include center(center, flex-start);
         h3 {
@@ -220,6 +228,107 @@ section {
       }
       p {
         color: var(--gray-8);
+      }
+    }
+  }
+}
+
+.courses {
+  position: relative;
+  min-height: 100vh;
+  padding: 5vh 5vw;
+  @include center(center, center, column);
+  gap: 20px;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10vh;
+    right: 2.5vw;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background: var(--cl);
+    // box-shadow: 0 0 0 10px var(--cl);
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+  &::before {
+    top: auto;
+    bottom: 2.5vh;
+    right: auto;
+    left: 2.5vw;
+    background: var(--purple-5);
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 600;
+  }
+  p {
+    color: var(--gray-8);
+  }
+  ul {
+    width: 100%;
+    gap: 20px;
+    @include center;
+    li {
+      padding: 10px;
+      width: 100%;
+      gap: 10px;
+      @include center(flex-start, center, column);
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 2px 0.5px var(--gray-4);
+      transition: 0.5s;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1px 2px 2.5px var(--gray-4);
+        .btn {
+          display: flex;
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      b {
+        color: var(--cl);
+        font-weight: 500;
+      }
+      p {
+        width: 80%;
+      }
+      hr {
+        height: 1.5px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: var(--cl);
+      }
+      .mentor {
+        @include center(center, flex-start);
+        gap: 10px;
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+        }
+        span {
+          @include center(flex-start, center, column);
+          h3 {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          p {
+            color: var(--gray-6);
+            font-size: 14px;
+          }
+        }
+      }
+      .btn {
+        margin: 10px 0;
+        align-self: center;
+        display: none;
       }
     }
   }

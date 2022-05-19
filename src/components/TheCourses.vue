@@ -1,36 +1,40 @@
 <template>
-  <section id="courses">
+  <section id="courses" class="courses">
     <h2>What Do You Want to Learn?</h2>
     <p>
       Choose the right class as you need. Then enjoy studying.
     </p>
     <ul>
       <li v-for="course in getCourses" :key="course">
-        <img src="course.img" alt="" />
-        <router-link :to="'/courses/' + course.id">
-          <mark>{{ course.title }}</mark>
-        </router-link>
+        <img :src="course.img" alt="" />
+        <b>{{ course.category }}</b>
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.text }}</p>
+        <hr />
+        <div class="mentor">
+          <img :src="course.mentor.img" alt="" />
+          <span>
+            <h4>{{ course.mentor.name }}</h4>
+            <p>{{ course.mentor.mentor }}</p>
+          </span>
+        </div>
+        <div class="btn">Access Class</div>
       </li>
     </ul>
+    <div class="btn">Show All Cases</div>
   </section>
 </template>
 <script>
+import uz from "../locales/uz.js";
+import en from "../locales/en.js";
 export default {
   computed: {
     getCourses() {
       let pages = [];
-      for (let i = 0; i < 4; i++) {
-        pages.push({
-          img: this.$t("courses[" + i + "].img"),
-          category: this.$t("courses[" + i + "].category"),
-          title: this.$t("courses[" + i + "].title"),
-          text: this.$t("courses[" + i + "].text"),
-          mentor: {
-            name: this.$t("courses[" + i + "].mentor.name"),
-            mentor: this.$t("courses[" + i + "].mentor.mentor"),
-            img: this.$t("courses[" + i + "].mentor.img"),
-          },
-        });
+      if (this.$i18n.locale === "uz") {
+        pages = uz.courses;
+      } else {
+        pages = en.courses;
       }
       return pages;
     },

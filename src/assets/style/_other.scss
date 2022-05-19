@@ -85,17 +85,18 @@ select {
 }
 
 .btn {
-  padding: 5px 20px;
+  margin-top: 20px;
   cursor: pointer;
-  color: #fff;
-  font-weight: 500;
-  white-space: nowrap;
-  background: var(--cl);
-  border-radius: 4px;
+  padding: 10px 20px;
+  @include center;
+  color: var(--cl);
+  font-weight: 600;
+  border: 2px solid var(--cl);
+  border-radius: 6px;
   transition: 0.5s;
   &:hover {
     color: #fff;
-    background: #013344;
+    background: var(--cl);
   }
 }
 input {
