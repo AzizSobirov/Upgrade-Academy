@@ -133,10 +133,7 @@
 }
 
 section {
-  // padding: 0 5vw;
   min-height: 100vh;
-  // @include center(center, flex-start);
-  // background: var(--cl);
 }
 .home {
   &_content {
@@ -159,6 +156,7 @@ section {
           flex-wrap: wrap;
           gap: 10px;
           mark {
+            cursor: pointer;
             padding: 4px;
             border-radius: 4px;
             color: var(--cl);
@@ -273,18 +271,18 @@ section {
     @include center;
     li {
       padding: 10px;
-      width: 100%;
+      width: calc(100vw / 5);
       gap: 10px;
       @include center(flex-start, center, column);
       background: #fff;
-      border-radius: 20px;
+      border-radius: 10px;
       box-shadow: 0 0 2px 0.5px var(--gray-4);
       transition: 0.5s;
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 1px 2px 2.5px var(--gray-4);
-        .btn {
-          display: flex;
+        box-shadow: 0 1.5px 4px 1.5px var(--gray-4);
+        .accsess {
+          height: 50px;
+          // overflow: auto;
         }
       }
       img {
@@ -309,8 +307,8 @@ section {
         @include center(center, flex-start);
         gap: 10px;
         img {
-          height: 50px;
-          width: 50px;
+          height: 40px;
+          width: 40px;
           border-radius: 50%;
         }
         span {
@@ -325,13 +323,25 @@ section {
           }
         }
       }
-      .btn {
-        margin: 10px 0;
-        align-self: center;
-        display: none;
+      .accsess {
+        height: 0;
+        width: 100%;
+        @include center;
+        overflow: hidden;
+        transition: 0.5s;
+        .btn {
+          padding: 5px 10px;
+          margin: 10px 0;
+          color: #fff;
+          background: var(--cl);
+        }
       }
     }
   }
+}
+
+.view_course {
+  @include center;
 }
 
 @import "media";

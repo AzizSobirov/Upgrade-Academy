@@ -18,10 +18,12 @@
             <p>{{ course.mentor.mentor }}</p>
           </span>
         </div>
-        <div class="btn">Access Class</div>
+        <div class="accsess">
+          <div class="btn">Access Class</div>
+        </div>
       </li>
     </ul>
-    <div class="btn">Show All Cases</div>
+    <div class="btn">Show All Classes</div>
   </section>
 </template>
 <script>

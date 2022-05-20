@@ -48,12 +48,13 @@
           <p>Suggestions</p>
         </li>
         <li>
-          <mark>UI UX Design</mark>
-          <mark>CSS Fundamental</mark>
-          <mark>3D Design Illustration</mark>
-          <mark>Website Development</mark>
-          <mark>Logo Design</mark>
-          <mark>Icon Design</mark>
+          <mark
+            v-for="key in courses"
+            :key="key.name"
+            @click="searchCourse(key.name)"
+          >
+            {{ key.name }}
+          </mark>
         </li>
       </ul>
     </div>
@@ -92,12 +93,24 @@
   </section>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
   name: "TheHome",
   data() {
     return {
       search: "",
+      // keywords: [
+      //   "UI UX Design",
+      //   "CSS Fundamental",
+      //   "3D Design Illustration",
+      //   "Website Development",
+      //   "Logo Design",
+      //   "Icon Design",
+      // ],
     };
+  },
+  computed: {
+    ...mapState(["courses"]),
   },
   methods: {
     searchCourse(search) {

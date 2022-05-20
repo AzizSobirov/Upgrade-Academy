@@ -501,6 +501,7 @@ section {
 }
 
 .home_content ul li:last-child mark {
+  cursor: pointer;
   padding: 4px;
   border-radius: 4px;
   color: var(--cl);
@@ -718,7 +719,7 @@ section {
 
 .courses ul li {
   padding: 10px;
-  width: 100%;
+  width: calc(100vw / 5);
   gap: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -734,7 +735,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 0 2px 0.5px var(--gray-4);
           box-shadow: 0 0 2px 0.5px var(--gray-4);
   -webkit-transition: 0.5s;
@@ -742,16 +743,12 @@ section {
 }
 
 .courses ul li:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0 1px 2px 2.5px var(--gray-4);
-          box-shadow: 0 1px 2px 2.5px var(--gray-4);
+  -webkit-box-shadow: 0 1.5px 4px 1.5px var(--gray-4);
+          box-shadow: 0 1.5px 4px 1.5px var(--gray-4);
 }
 
-.courses ul li:hover .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.courses ul li:hover .accsess {
+  height: 50px;
 }
 
 .courses ul li img {
@@ -794,8 +791,8 @@ section {
 }
 
 .courses ul li .mentor img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
@@ -825,12 +822,48 @@ section {
   font-size: 14px;
 }
 
-.courses ul li .btn {
+.courses ul li .accsess {
+  height: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.courses ul li .accsess .btn {
+  padding: 5px 10px;
   margin: 10px 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  display: none;
+  color: #fff;
+  background: var(--cl);
+}
+
+.view_course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 999px) {
@@ -975,6 +1008,9 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .courses ul li {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=app.css.map */

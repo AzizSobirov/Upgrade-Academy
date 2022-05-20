@@ -8,7 +8,7 @@
     </div>
     <ul>
       <li v-for="page in getPages" :key="page" @click="openNav()">
-        <a :href="page.link">
+        <a :href="'/' + page.link">
           {{ page.name }}
         </a>
       </li>

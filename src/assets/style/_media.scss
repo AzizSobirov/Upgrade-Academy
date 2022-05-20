@@ -123,6 +123,9 @@
     }
     ul {
       flex-direction: column;
+      li {
+        width: 100%;
+      }
     }
   }
 }
